@@ -6,6 +6,7 @@ meta:
     site_subtitle: "岁月之门"
     site_language: "zh-cn"
     absolute_baseurl: http://bairimen.github.com
+    static_url: /images
     domain: bairimen.github.com
     author:
         full_name: Cong Young
@@ -29,7 +30,7 @@ markdown: kramdown
 
 pygments: false
 
-#permalink: /blog/:year/:month/:day/:title
+permalink: /blog/:year:month/:title/
 
 disqus_short_name: ypchenstory
 

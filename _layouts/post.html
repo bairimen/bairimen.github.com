@@ -24,23 +24,26 @@ layout: default
 
 	
 		<div id="post-bottom">
-			<!-- JiaThis Button BEGIN -->
-			<div id="ckepop">
-				<span class="jiathis_txt">分享到：</span>
-				<a class="jiathis_button_qzone"></a>
-				<a class="jiathis_button_tsina"></a>
-				<a class="jiathis_button_tqq"></a>
-				<a class="jiathis_button_renren"></a>
-				<a class="jiathis_button_kaixin001"></a>
-				<a href="http://www.jiathis.com/share?uid=1558027" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-				<a class="jiathis_counter_style"></a>
-				
-				<span class="more right">
-				<a href="{{site.baseurl}}/">返回主页</a>
-				</span>
-			</div>
-			<!-- JiaThis Button END -->	
-
+<!-- Baidu Button BEGIN -->
+    <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+        <a class="bds_tsina"></a>
+        <a class="bds_tqq"></a>
+        <a class="bds_renren"></a>
+        <a class="bds_douban"></a>
+        <a class="bds_qzone"></a>
+        <a class="bds_fbook"></a>
+        <a class="bds_mail"></a>
+        <a class="bds_kaixin001"></a>
+        <a class="bds_msn"></a>
+        <a class="bds_twi"></a>
+        <span class="bds_more">更多</span>
+    </div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=131983" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+	document.getElementById("bdshell_js").src = "http://share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+</script>
+<!-- Baidu Button END -->
 		</div>
 	
 	</article>
@@ -77,14 +80,15 @@ layout: default
 {% endcomment %}
 
 <section class="comments" id="comments">
-	<!-- Duoshuo Comment BEGIN -->
+<!-- Duoshuo Comment BEGIN -->
 	<div class="ds-thread"></div>
 	<script type="text/javascript">
-	var duoshuoQuery = {short_name: "ypchen"};
+	var duoshuoQuery = {short_name:"bairimen"};
 	(function() {
 		var ds = document.createElement('script');
 		ds.type = 'text/javascript';ds.async = true;
 		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
 		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
 	})();
 	</script>
