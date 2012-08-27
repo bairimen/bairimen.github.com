@@ -10,9 +10,9 @@ tags: shell groovy log search nginx
 
 Nginx日志格式如下
 
-`
+{% highlight nginx %}
 8.8.8.8 [27/Aug/2012:00:21:17 +0800] "GET /search.do?callback=jsonp_callback&q=%E6%9C%89%E7%82%B9%E8%88%8D%E4%B8%8D%E5%BE%97&page=1&size=12 HTTP/1.1" 200 197 "Mozilla/5.0 (Linux; U; Android 4.0.3; zh-cn; ThL V12 Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"
-`
+{% endhighlight %}
 
 其中*q=*后面部分为用户查询词。分两步走
 
@@ -20,8 +20,6 @@ Nginx日志格式如下
 
 {% highlight bash %}
 #!/bin/bash
-
-cd /root/cron
 
 grep  "GET /search.do" /data/logs/search/access.log  \
         awk -F "&q=" '{print $2}' |awk -F '[& ]' '{print $1}'| \
@@ -49,6 +47,7 @@ $head words.sort
 ##调用groovy脚本入库，再次感慨下脚本的快捷
 
 {% highlight groovy %}
+
 #!/usr/bin/env groovy
 
 @Grab('mysql:mysql-connector-java:5.1.18')
@@ -69,6 +68,7 @@ sql.withBatch(1024,'INSERT ignore INTO hotsearch VALUES(?,?,?)'){ps->
         }
     }
 }
+
 {% endhighlight %}
 
 
