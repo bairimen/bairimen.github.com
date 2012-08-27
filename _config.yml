@@ -20,6 +20,9 @@ url: http://bairimen.github.com
 
 markdown: kramdown
 
+pygments: false
+
+
 # markdown: maruku
 # maruku:
 #   use_divs: true
