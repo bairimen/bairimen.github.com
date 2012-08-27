@@ -18,16 +18,9 @@ Nginx日志格式如下
 
 ##使用shell直接统计出topN查询词
 
-`
-#!/bin/bash
 
-cd /root/cron
+<script src="https://gist.github.com/3488794.js?file=getHotSearch"></script>
 
-grep  "GET /search.do" /data/logs/search/access.log  \
-        awk -F "&q=" '{print $2}' |awk -F '[& ]' '{print $1}'| \
-        sort |uniq -c|sort -rn | head -5000 > words.sort
-
-`
 words.sort 结果如下
 `
 $head words.sort
@@ -46,28 +39,7 @@ $head words.sort
 
 ##调用groovy脚本入库，再次感慨下脚本的快捷
 
-`
-#!/usr/bin/env groovy
-
-@Grab('mysql:mysql-connector-java:5.1.18')
-@GrabConfig(systemClassLoader=true)
-import groovy.sql.Sql
-
-def sql=Sql.newInstance("jdbc:mysql://mysql-server:3306/database?characterEncoding=UTF-8",
-        "mysql-user", "mysql-pwd", "com.mysql.jdbc.Driver")
-
-def today = new Date()
-
-sql.withBatch(1024,'INSERT ignore INTO hotsearch VALUES(?,?,?)'){ps->
-    new File('words.sort').splitEachLine("\\s+",'utf8'){
-        int count = it[1] as int
-        if(it[2]){
-            def word = URLDecoder.decode(it[2],'utf8')
-            ps.addBatch([word, count, today])
-        }
-    }
-}
-`
+<script src="https://gist.github.com/3488814.js?file=save2db"></script>
 
 OK.That's All.
 
