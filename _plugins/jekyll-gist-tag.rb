@@ -7,21 +7,16 @@ module Jekyll
       super
       
       tokens = url.split(' ')
-      @url = tokens[0]
       lang = tokens[1]
       
-      /https:\/\/raw.github.com\/gist\/(.*)\/(.*)\/(.*\.([a-zA-Z]+))/ =~ @url
-      @gist = $1
-      @uuid = $2
-      @file = $3
-      @lang = $4
-      
+      @lang = "java"
+
       if lang != nil && !lang.empty?
         @lang = lang
       end
       
       host = 'raw.github.com'
-      path = "/gist/#{@gist}/#{@uuid}/#{@file}"
+      path = "/gist/#{tokens[0]}"
 
       http = Net::HTTP.new(host, 443)
       http.use_ssl = true

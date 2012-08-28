@@ -24,7 +24,7 @@ padding: 0.2em 0.9em;
 	background: #111111; 
 }
 
-
+.highlight .lineno{color:#343}
 code, pre {
 	font-family: "Consolas", "Courier New", "Courier", "FreeMono", monospace;
 	font-size:0.95em;
