@@ -1,2 +1,6 @@
 highlight
 http://lcwangchao.github.com/%E5%AE%89%E8%A3%85/2012/06/05/jekyllinstall/
+
+不错的主题
+
+http://hjkl.me/tagcloud.html
