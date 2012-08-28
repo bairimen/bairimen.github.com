@@ -46,7 +46,7 @@ $head words.sort
 
 ##调用groovy脚本入库，再次感慨下脚本的快捷
 
-{% highlight groovy %}
+{% highlight java %}
 
 #!/usr/bin/env groovy
 
@@ -71,6 +71,10 @@ sql.withBatch(1024,'INSERT ignore INTO hotsearch VALUES(?,?,?)'){ps->
 
 {% endhighlight %}
 
+
+{% render_gist 3488814 %}
+
+{% render_gist https://raw.github.com/gist/3488814/d827ce2f4ffa721200e1d4a0c9153a4288165a85/save2db %}
 
 OK.That's All.
 
