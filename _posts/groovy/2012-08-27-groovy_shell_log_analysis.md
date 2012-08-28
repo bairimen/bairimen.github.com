@@ -46,7 +46,7 @@ $head words.sort
 
 ##调用groovy脚本入库，再次感慨下脚本的快捷
 
-{% highlight groovy %}
+{% highlight java %}
 
 #!/usr/bin/env groovy
 
