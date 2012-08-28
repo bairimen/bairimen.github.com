@@ -46,7 +46,7 @@ $head words.sort
 
 ##调用groovy脚本入库，再次感慨下脚本的快捷
 
-{% highlight java %}
+{% highlight groovy %}
 
 #!/usr/bin/env groovy
 
@@ -54,7 +54,7 @@ $head words.sort
 @GrabConfig(systemClassLoader=true)
 import groovy.sql.Sql
 
-def sql=Sql.newInstance("jdbc:mysql://mysql-server:3306/database?characterEncoding=UTF-8",
+def sql=Sql.newInstance("jdbc:mysql://mysql-server:3306/db?characterEncoding=UTF-8",
         "mysql-user", "mysql-pwd", "com.mysql.jdbc.Driver")
 
 def today = new Date()
