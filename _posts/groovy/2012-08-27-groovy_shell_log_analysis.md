@@ -18,7 +18,7 @@ Nginx日志格式如下
 
 ##使用shell直接统计出topN查询词
 
-{% highlight bash %}
+{% highlight bash linenos %}
 #!/bin/bash
 
 grep  "GET /search.do" /data/logs/search/access.log  \
@@ -46,7 +46,7 @@ $head words.sort
 
 ##调用groovy脚本入库，再次感慨下脚本的快捷
 
-{% highlight java %}
+{% highlight java linenos %}
 
 #!/usr/bin/env groovy
 
@@ -73,8 +73,8 @@ sql.withBatch(1024,'INSERT ignore INTO hotsearch VALUES(?,?,?)'){ps->
 
 
 
+<!-- render_gist https://raw.github.com/gist/3488814/d827ce2f4ffa721200e1d4a0c9153a4288165a85/save2db.groovy -->
 
-{% render_gist https://raw.github.com/gist/3488814/d827ce2f4ffa721200e1d4a0c9153a4288165a85/save2db.groovy %}
 
 OK.That's All.
 
