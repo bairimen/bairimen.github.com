@@ -46,7 +46,7 @@ SH的冬天，风还是比较大的，想想上海滩里面的风衣就知道了
 一场风花雪月的事。
 
 纪念博客正式开通。
-
-
-![dulala]({{ site.meta.static_url }}/big/thai_kp.jpg)
+<a href="{{ site.meta.static_url }}/big/thai_kp.jpg" target="_blank" title="分享卡片机作品">
+<img src="{{ site.meta.static_url }}/big/thai_kp_small.jpg" alt="dulala" />
+</a>
 

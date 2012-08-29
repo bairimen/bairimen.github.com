@@ -4,6 +4,7 @@ title: "使用shell脚本结合groovy分析搜索日志获取热搜词"
 description: ""
 category: shell 
 tags: shell groovy log search nginx
+comment: true
 ---
 
 #有个需求，分析搜索日志，获取热搜词。
